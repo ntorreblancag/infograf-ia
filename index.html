@@ -1,593 +1,278 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Infograf-IA | Guía de elaboración</title>
-
-    <style>
-        :root {
-            --azul: #1B1F49;
-            --turquesa: #74CEC4;
-            --rosado: #F2567A;
-            --crema: #F4F2E5;
-            --blanco: #FFFFFF;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            margin: 0;
-            background-color: var(--blanco);
-            color: var(--azul);
-            font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.7;
-        }
-
-        .contenedor {
-            width: 90%;
-            max-width: 1050px;
-            margin: 0 auto;
-            padding: 50px 0 70px;
-        }
-
-        /* ENCABEZADO */
-
-        .encabezado {
-            border-bottom: 4px solid var(--rosado);
-            padding-bottom: 25px;
-            margin-bottom: 30px;
-        }
-
-        .etiqueta {
-            color: var(--rosado);
-            font-size: 14px;
-            font-weight: bold;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin-bottom: 5px;
-        }
-
-        h1 {
-            color: var(--azul);
-            font-size: 44px;
-            line-height: 1.2;
-            margin: 0 0 10px;
-        }
-
-        .introduccion {
-            max-width: 850px;
-            font-size: 18px;
-            margin: 0;
-        }
-
-        /* MENÚ */
-
-        .menu-secciones {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 14px;
-            margin: 30px 0 45px;
-        }
-
-        .menu-secciones a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 58px;
-            padding: 12px 18px;
-            border: 2px solid var(--azul);
-            border-radius: 12px;
-            color: var(--azul);
-            background-color: var(--blanco);
-            font-weight: bold;
-            text-align: center;
-            text-decoration: none;
-            transition: background-color 0.2s ease, color 0.2s ease;
-        }
-
-        .menu-secciones a:hover,
-        .menu-secciones a:focus {
-            color: var(--blanco);
-            background-color: var(--azul);
-        }
-
-        /* SECCIONES PRINCIPALES */
-
-        .seccion-principal {
-            scroll-margin-top: 20px;
-            margin-top: 55px;
-        }
-
-        .titulo-seccion {
-            color: var(--azul);
-            font-size: 32px;
-            padding-bottom: 12px;
-            margin-bottom: 25px;
-            border-bottom: 4px solid var(--rosado);
-        }
-
-        /* BLOQUES */
-
-        .bloque {
-            border: 1px solid var(--turquesa);
-            border-radius: 18px;
-            padding: 30px;
-            margin-bottom: 25px;
-            background-color: var(--blanco);
-        }
-
-        h2 {
-            color: var(--azul);
-            font-size: 25px;
-            margin-top: 0;
-            margin-bottom: 18px;
-        }
-
-        h3 {
-            color: var(--rosado);
-            font-size: 18px;
-            margin-bottom: 8px;
-        }
-
-        .subtitulo {
-            color: var(--rosado);
-            font-size: 21px;
-            margin-top: 10px;
-            margin-bottom: 12px;
-        }
-
-        p {
-            margin-top: 0;
-            margin-bottom: 16px;
-        }
-
-        strong {
-            color: var(--azul);
-        }
-
-        ol,
-        ul {
-            margin-top: 8px;
-            padding-left: 28px;
-        }
-
-        li {
-            margin-bottom: 7px;
-        }
-
-        /* CAJAS DE EJEMPLO */
-
-        .ejemplo {
-            background-color: var(--crema);
-            border-radius: 12px;
-            padding: 20px 24px;
-            margin-top: 22px;
-        }
-
-        .ejemplo h3 {
-            color: var(--azul);
-            margin-top: 0;
-            margin-bottom: 10px;
-        }
-
-        .ejemplo p {
-            margin: 4px 0;
-        }
-
-        /* FÓRMULAS */
-
-        .formula {
-            background-color: var(--turquesa);
-            color: var(--azul);
-            border-radius: 12px;
-            padding: 18px 22px;
-            margin: 18px 0;
-            font-weight: bold;
-            text-align: center;
-        }
-
-        /* PATRÓN GENERAL */
-
-        .patron {
-            background-color: var(--azul);
-            color: var(--blanco);
-            border-radius: 18px;
-            padding: 32px;
-            margin-top: 30px;
-            margin-bottom: 25px;
-        }
-
-        .patron h2 {
-            color: var(--turquesa);
-            margin-bottom: 10px;
-        }
-
-        .patron strong {
-            color: var(--turquesa);
-        }
-
-        .paso {
-            padding: 12px 0;
-        }
-
-        .paso p {
-            margin: 3px 0 0;
-        }
-
-        .flecha {
-            color: var(--rosado);
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        .mensaje-final {
-            background-color: var(--crema);
-            color: var(--azul);
-            padding: 20px;
-            border-radius: 12px;
-            margin-top: 22px;
-            font-weight: bold;
-        }
-
-        /* INFOGRAFÍA */
-
-        .nota-opcional {
-            padding: 18px 22px;
-            margin: 20px 0;
-            border-left: 6px solid var(--turquesa);
-            border-radius: 10px;
-            background-color: var(--crema);
-        }
-
-        .codigo-color {
-            display: inline-block;
-            padding: 2px 8px;
-            border: 1px solid var(--azul);
-            border-radius: 6px;
-            font-family: monospace;
-            font-weight: bold;
-        }
-
-        .enlace-oficial {
-            color: var(--azul);
-            font-weight: bold;
-            text-decoration-color: var(--rosado);
-            text-decoration-thickness: 2px;
-        }
-
-        .enlace-oficial:hover {
-            color: var(--rosado);
-        }
-
-        .division-instruccion {
-            margin: 32px 0;
-            border: 0;
-            border-top: 2px dotted var(--azul);
-        }
-
-        .sin-contenido {
-            padding: 25px;
-            border: 1px solid var(--turquesa);
-            border-radius: 14px;
-            background-color: var(--crema);
-        }
-
-        /* RESPONSIVE */
-
-        @media (max-width: 700px) {
-            .contenedor {
-                width: 92%;
-                padding-top: 30px;
-            }
-
-            h1 {
-                font-size: 34px;
-            }
-
-            .titulo-seccion {
-                font-size: 27px;
-            }
-
-            .menu-secciones {
-                grid-template-columns: 1fr;
-            }
-
-            .bloque,
-            .patron {
-                padding: 22px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Infograf-IA: guía para elaborar resúmenes ejecutivos, conclusiones e infografías de Informes Finales CGR.">
+  <title>Infograf-IA</title>
+  <style>
+    :root { --navy:#1B1F49; --mint:#74CEC4; --pink:#F2567A; --cream:#F4F2E5; --white:#FFFFFF; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:Arial, Helvetica, sans-serif; line-height:1.7; color:var(--navy); background:var(--white); }
+    a { color:var(--navy); font-weight:700; text-decoration-color:var(--pink); text-underline-offset:3px; }
+    code { padding:.12rem .42rem; border:1px solid var(--mint); border-radius:.35rem; background:var(--cream); color:var(--navy); }
+    .site-header { padding:4.5rem 1.5rem 3rem; background:var(--navy); color:var(--white); }
+    .header-inner, main { width:min(1080px, 92%); margin:auto; }
+    .eyebrow { margin:0 0 .4rem; color:var(--mint); font-size:.82rem; font-weight:800; letter-spacing:.16em; text-transform:uppercase; }
+    h1 { margin:0; color:var(--white); font-size:clamp(2.6rem, 8vw, 5rem); line-height:1.05; }
+    .subtitle { max-width:760px; margin:1rem 0 0; font-size:1.12rem; }
+    .color-line { display:grid; grid-template-columns:64fr 18fr 18fr; height:8px; }
+    .color-line span:nth-child(1) { background:var(--navy); } .color-line span:nth-child(2) { background:var(--mint); } .color-line span:nth-child(3) { background:var(--pink); }
+    .nav { position:sticky; top:0; z-index:10; display:flex; justify-content:center; gap:.7rem; padding:.8rem 1rem; background:var(--white); border-bottom:1px solid var(--mint); }
+    .nav a { padding:.65rem 1rem; border-radius:999px; text-decoration:none; } .nav a:hover, .nav a:focus { color:var(--white); background:var(--navy); }
+    main { padding:2rem 0 5rem; }
+    .content-section { scroll-margin-top:5rem; padding:2rem 0; }
+    .section-title { margin:0 0 1.25rem; padding-bottom:.65rem; border-bottom:4px solid var(--pink); font-size:clamp(1.8rem, 4vw, 2.7rem); }
+    .card { margin:0 0 1.2rem; padding:1.6rem; border:1px solid var(--mint); border-radius:18px; background:var(--white); box-shadow:0 8px 24px rgba(27,31,73,.06); }
+    h3 { margin:.1rem 0 1rem; font-size:1.35rem; } h4 { margin:1.4rem 0 .45rem; color:var(--pink); font-size:1.05rem; }
+    p { margin:.55rem 0 1rem; } ul { margin:.5rem 0 1.2rem; padding-left:1.4rem; } li { margin:.38rem 0; }
+    .lead { margin-bottom:.35rem; }
+    .formula { padding:1rem; border-radius:12px; background:var(--mint); font-weight:800; text-align:center; }
+    .arrow { color:var(--pink); font-size:1.8rem; font-weight:900; text-align:center; }
+    .content-section:last-child .card:first-of-type { background:var(--cream); }
+    footer { padding:1.2rem; background:var(--navy); color:var(--white); text-align:center; }
+    @media (max-width:680px) { .site-header { padding-top:3rem; } .nav { position:static; flex-direction:column; } .nav a { text-align:center; } .card { padding:1.15rem; } }
+  </style>
 </head>
-
 <body>
-
-    <main class="contenedor">
-
-        <!-- =========================================
-             ENCABEZADO
-        ========================================== -->
-
-        <header class="encabezado">
-
-            <div class="etiqueta">
-                Fuente de conocimiento
-            </div>
-
-            <h1>Infograf-IA</h1>
-
-            <p class="introduccion">
-                Guía para la elaboración de resúmenes ejecutivos,
-                conclusiones e infografías basadas en los Informes
-                Finales de CGR.
-            </p>
-
-        </header>
-
-
-        <!-- =========================================
-             MENÚ
-        ========================================== -->
-
-        <nav
-            class="menu-secciones"
-            aria-label="Secciones principales"
-        >
-
-            <a href="#resumen-ejecutivo">
-                Resumen ejecutivo
-            </a>
-
-            <a href="#conclusiones">
-                Conclusiones
-            </a>
-
-            <a href="#infografia">
-                Infografía
-            </a>
-
-        </nav>
-
-
-        <!-- =========================================
-             RESUMEN EJECUTIVO
-        ========================================== -->
-
-        <section
-            id="resumen-ejecutivo"
-            class="seccion-principal"
-        >
-
-            <h2 class="titulo-seccion">
-                Resumen ejecutivo
-            </h2>
-
-            <p class="introduccion">
-                Estructura y criterios de redacción para reproducir
-                la lógica utilizada en los Informes Finales de CGR.
-            </p>
-
-            <br>
-
-
-            <!-- OBJETIVO -->
-
-            <article class="bloque">
-
-                <h2>1. Objetivo</h2>
-
-                <p>
-                    Se señala
-                    <strong>qué fue objeto de la auditoría</strong>,
-                    identificando la entidad fiscalizada, la materia
-                    examinada, el período correspondiente y el propósito
-                    de la revisión. Cuando corresponde, también se
-                    mencionan los principales ámbitos sobre los cuales
-                    se efectuaron verificaciones.
-                </p>
-
-                <p>
-                    La redacción es
-                    <strong>
-                        formal, objetiva, impersonal y descriptiva
-                    </strong>.
-                    No adelanta conclusiones ni valoraciones.
-                </p>
-
-                <h3>Construcción habitual</h3>
-
-                <ol>
-                    <li>Materia examinada.</li>
-                    <li>Entidad fiscalizada.</li>
-                    <li>Período auditado.</li>
-                    <li>Finalidad o propósito de la auditoría.</li>
-                    <li>Aspectos generales sometidos a verificación.</li>
-                </ol>
-
-                <div class="ejemplo">
-
-                    <h3>Inicio sugerido</h3>
-
-                    <p>“La auditoría tuvo por objeto…”</p>
-                    <p>“La fiscalización tuvo por objeto…”</p>
-                    <p>“El examen tuvo por finalidad…”</p>
-
-                </div>
-
-            </article>
-
-
-            <!-- OBJETIVOS ESPECÍFICOS -->
-
-            <article class="bloque">
-
-                <h2>
-                    2. Objetivos específicos /
-                    Procedimientos específicos
-                </h2>
-
-                <p>
-                    Apartado que aparece
-                    <strong>
-                        cuando el informe contempla objetivos o
-                        procedimientos específicos
-                    </strong>.
-                    No es obligatorio en todos los Resúmenes Ejecutivos
-                    revisados.
-                </p>
-
-                <p>
-                    Consiste en un
-                    <strong>
-                        punteo breve y concreto de las materias
-                        particulares verificadas durante la auditoría
-                    </strong>,
-                    desagregando el objetivo general.
-                </p>
-
-                <p>
-                    Cada punto debe expresar
-                    <strong>
-                        una acción de revisión o verificación
-                    </strong>,
-                    sin incorporar todavía sus resultados.
-                </p>
-
-                <p>
-                    <strong>Lenguaje:</strong>
-                    técnico, directo, objetivo e impersonal.
-                </p>
-
-                <div class="ejemplo">
-
-                    <h3>Inicios apropiados</h3>
-
-                    <ul>
-                        <li>“Verificar…”</li>
-                        <li>“Comprobar…”</li>
-                        <li>“Determinar…”</li>
-                        <li>“Constatar…”</li>
-                        <li>“Examinar…”</li>
-                        <li>“Validar…”</li>
-                    </ul>
-
-                </div>
-
-            </article>
-
-
-            <!-- PRINCIPALES RESULTADOS -->
-
-            <article class="bloque">
-
-                <h2>3. Principales resultados</h2>
-
-                <p>
-                    Corresponde al
-                    <strong>
-                        núcleo del Resumen Ejecutivo
-                    </strong>.
-                    Presenta mediante puntos separados los hallazgos,
-                    observaciones o situaciones más relevantes obtenidas
-                    como resultado de la auditoría, priorizando aquellas
-                    de mayor importancia.
-                </p>
-
-                <p>
-                    Cada punto debe permitir comprender:
-                </p>
-
-                <div class="formula">
-                    situación detectada
-                    →
-                    evidencia o magnitud
-                    →
-                    consecuencia o medida, cuando corresponda
-                </div>
-
-                <p>
-                    Cuando existen cifras relevantes, se incorporan
-                    directamente: cantidades, montos, porcentajes,
-                    número de casos u otros antecedentes cuantificables.
-                </p>
-
-                <p>
-                    La redacción debe ser
-                    <strong>
-                        objetiva y conclusiva, pero estrictamente
-                        proporcional a lo acreditado en el informe
-                    </strong>.
-                </p>
-
-                <div class="ejemplo">
-
-                    <h3>
-                        Inicios apropiados según el contenido
-                    </h3>
-
-                    <ul>
-                        <li>“Se constató que…”</li>
-                        <li>“Se verificó que…”</li>
-                        <li>“Se observó que…”</li>
-                        <li>“Se determinó que…”</li>
-                        <li>
-                            “De acuerdo con la información examinada…”
-                        </li>
-                        <li>
-                            “Según los antecedentes analizados…”
-                        </li>
-                        <li>
-                            “Del análisis efectuado se advirtió que…”
-                        </li>
-                    </ul>
-
-                </div>
-
-            </article>
-
-
-            <!-- CIERRE -->
-
-            <article class="bloque">
-
-                <h2>
-                    4. Cierre o antecedentes complementarios
-                </h2>
-
-                <p>
-                    Después de los principales resultados
-                    <strong>
-                        pueden incorporarse antecedentes finales cuando
-                        el informe lo requiera
-                    </strong>,
-                    pero no deberían agregarse artificialmente si no
-                    están presentes.
-                </p>
-
-                <p>
-                    Este cierre puede recoger consecuencias generales,
-                    comunicaciones, derivaciones u otros antecedentes
-                    institucionales vinculados a la auditoría.
-                </p>
-
-                <div class="ejemplo">
-
-                    <h3>Formulaciones posibles</h3>
-
-                    <ul>
-                        <li>
-                            “En virtud de los hechos expuestos…”
-                        </li>
-                        <li>
-                            “Sobre la materia, cabe señalar que…”
-                        </li>
-                        <li>
-              
+  <header class="site-header">
+    <div class="header-inner">
+      <p class="eyebrow">Fuente de conocimiento</p>
+      <h1>Infograf-IA</h1>
+      <p class="subtitle">Guía para la elaboración de resúmenes ejecutivos, conclusiones e infografías basadas en Informes Finales de la CGR.</p>
+    </div>
+  </header>
+  <div class="color-line" aria-hidden="true"><span></span><span></span><span></span></div>
+  <nav class="nav" aria-label="Contenido principal">
+    <a href="#resumen-ejecutivo">Resumen ejecutivo</a>
+    <a href="#conclusiones">Conclusiones</a>
+    <a href="#infografia">Infografía</a>
+  </nav>
+  <main>
+    <section id="resumen-ejecutivo" class="content-section">
+<h2 class="section-title">Resumen Ejecutivo</h2>
+<div class="card">
+<h3>Objetivo</h3>
+<p class="">Se señala qué fue objeto de la auditoría, identificando la entidad fiscalizada, la materia examinada, el período correspondiente y el propósito de la revisión. Cuando corresponde, también se mencionan los principales ámbitos sobre los cuales se efectuaron verificaciones.</p>
+<p class="">La redacción es formal, objetiva, impersonal y descriptiva. No adelanta conclusiones ni valoraciones.</p>
+<p class="lead"><strong>Construcción habitual:</strong></p>
+<ul><li>Materia examinada.</li><li>Entidad fiscalizada.</li><li>Período auditado.</li><li>Finalidad o propósito de la auditoría.</li><li>Aspectos generales sometidos a verificación.</li></ul>
+<p class="lead"><strong>Inicio sugerido:</strong></p>
+<ul><li>“La auditoría tuvo por objeto…”</li><li>“La fiscalización tuvo por objeto…”</li><li>“El examen tuvo por finalidad…”</li></ul>
+</div>
+<div class="card">
+<h3>Objetivos específicos / Procedimientos específicos</h3>
+<p class="">Apartado que aparece cuando el informe contempla objetivos o procedimientos específicos. No es obligatorio en todos los Resúmenes Ejecutivos revisados.</p>
+<p class="">Consiste en un punteo breve y concreto de las materias particulares verificadas durante la auditoría, desagregando el objetivo general.</p>
+<p class="">Cada punto debe expresar una acción de revisión o verificación, sin incorporar todavía sus resultados.</p>
+<p class="">Lenguaje: técnico, directo, objetivo e impersonal.</p>
+<p class="lead"><strong>Inicios apropiados:</strong></p>
+<ul><li>“Verificar…”</li><li>“Comprobar…”</li><li>“Determinar…”</li><li>“Constatar…”</li><li>“Examinar…”</li><li>“Validar…”</li></ul>
+</div>
+<div class="card">
+<h3>Principales resultados</h3>
+<p class="">Corresponde al núcleo del Resumen Ejecutivo. Presenta mediante puntos separados los hallazgos, observaciones o situaciones más relevantes obtenidas como resultado de la auditoría, priorizando aquellas de mayor importancia.</p>
+<p class="">Cada punto debe permitir comprender:</p>
+<p class="formula">situación detectada → evidencia o magnitud → consecuencia o medida, cuando corresponda.</p>
+<p class="">Cuando existen cifras relevantes, se incorporan directamente: cantidades, montos, porcentajes, número de casos u otros antecedentes cuantificables.</p>
+<p class="">La redacción debe ser objetiva y conclusiva, pero estrictamente proporcional a lo acreditado en el informe.</p>
+<p class="lead"><strong>Inicios apropiados según el contenido:</strong></p>
+<ul><li>“Se constató que…”</li><li>“Se verificó que…”</li><li>“Se observó que…”</li><li>“Se determinó que…”</li><li>“De acuerdo con la información examinada…”</li><li>“Según los antecedentes analizados…”</li><li>“Del análisis efectuado se advirtió que…”</li></ul>
+</div>
+<div class="card">
+<h3>Cierre o antecedentes complementarios</h3>
+<p class="">Después de los principales resultados pueden incorporarse antecedentes finales cuando el informe lo requiera, pero no deberían agregarse artificialmente si no están presentes.</p>
+<p class="">Este cierre puede recoger consecuencias generales, comunicaciones, derivaciones u otros antecedentes institucionales vinculados a la auditoría.</p>
+<p class="lead"><strong>Formulaciones posibles:</strong></p>
+<ul><li>“En virtud de los hechos expuestos…”</li><li>“Sobre la materia, cabe señalar que…”</li><li>“Asimismo, se hace presente que…”</li><li>“Finalmente, corresponde indicar que…”</li></ul>
+<p class="">Si el informe identifica profesionales designados, responsables de determinadas actuaciones u otros antecedentes administrativos, pueden mencionarse cuando formen parte efectivamente del Resumen Ejecutivo o sean necesarios para comprender una actuación. No deberían incorporarse automáticamente en todos los resúmenes.</p>
+</div>
+<div class="card">
+<h3>Patrón general</h3>
+<p class="">En términos simples, la estructura que conviene enseñarle al agente es:</p>
+<h4>OBJETIVO</h4>
+<p class="">Qué se auditó + entidad + período + propósito.</p>
+<div class="arrow">↓</div>
+<h4>OBJETIVOS/PROCEDIMIENTOS ESPECÍFICOS, SI EXISTEN</h4>
+<p class="">Punteo de acciones concretas de revisión.</p>
+<div class="arrow">↓</div>
+<h4>PRINCIPALES RESULTADOS</h4>
+<p class="">Punteo de hallazgos principales + evidencia/cifras + consecuencias o acciones asociadas.</p>
+<div class="arrow">↓</div>
+<h4>CIERRE, SI CORRESPONDE</h4>
+<p class="">Antecedentes finales, derivaciones, comunicaciones u otras precisiones relevantes.</p>
+</div>
+</section>
+    <section id="conclusiones" class="content-section">
+<h2 class="section-title">Conclusiones</h2>
+<div class="card">
+<h3>1. Párrafo introductorio</h3>
+<p class="">Se comienza indicando el resultado general del análisis de la respuesta de la entidad al preinforme.</p>
+<p class="">Debe señalar si los antecedentes aportados permitieron salvar todas, algunas o ninguna de las observaciones.</p>
+<p class="">Una fórmula recurrente es:</p>
+<p class="">“Atendidas las consideraciones expuestas durante el desarrollo del presente trabajo…”</p>
+<p class="">Por ejemplo, en INFORME FINAL N° 676_2026 se indica que los antecedentes permitieron salvar una de las observaciones; mientras que en 1_INFORME FINAL 483-25 MOP se establece que no se aportaron antecedentes suficientes para salvarlas.</p>
+<p class="">Objetivo: presentar el balance general entre el preinforme y el resultado definitivo.</p>
+</div>
+<div class="card">
+<h3>2. Observaciones levantadas y/o subsanadas</h3>
+<p class="">A continuación, se identifican expresamente las observaciones que dejaron de requerir acciones posteriores.</p>
+<p class="lead"><strong>Para cada una indicar:</strong></p>
+<ul><li>capítulo o acápite;</li><li>numeral de la observación;</li><li>materia observada;</li><li>estado final: levantada o subsanada;</li><li>cuando corresponda, breve referencia al motivo.</li><li>En INFORME FINAL N° 901-2025, por ejemplo, primero se identifica una observación levantada y otra subsanada antes de pasar a aquellas que generan acciones.</li><li>Importante: no son equivalentes:</li><li>Levantada: los antecedentes permiten desvirtuar lo objetado.</li><li>Subsanada: la entidad remedió completamente lo observado y acreditó las medidas adoptadas. Esta distinción está expresamente contemplada por el Manual.</li></ul>
+</div>
+<div class="card">
+<h3>3. Acciones derivadas</h3>
+<p class="">Luego se separan aquellas observaciones que generan una acción derivada, cuando corresponda.</p>
+<p class="">Se introduce normalmente con una fórmula como:</p>
+<p class="">“No obstante lo anterior, y en virtud de los resultados obtenidos…”</p>
+<p class="lead"><strong>Aquí deben identificarse acciones tales como:</strong></p>
+<ul><li>reparo;</li><li>procedimiento disciplinario o sumario;</li><li>restitución/reintegro;</li><li>denuncia;</li><li>remisión a otro organismo;</li><li>otras acciones expresamente establecidas en el informe.</li><li>El Manual indica expresamente que estas acciones deben aparecer antes de las restantes medidas correctivas.</li></ul>
+<p class="">Por ejemplo, en INFORME FINAL DE INVESTIGACIÓN ESPECIAL N° 814, DE 2025, SOBRE EVENTUALES IRREGULARIDA primero se establece un reparo por $214.043.374 y posteriormente el procedimiento disciplinario correspondiente.</p>
+</div>
+<div class="card">
+<h3>4. Observaciones que se mantienen y medidas correctivas</h3>
+<p class="">Después se presentan las observaciones restantes que continúan vigentes.</p>
+<p class="">La estructura de cada conclusión debería ser:</p>
+<p class="formula">Referencia → Complejidad → Síntesis de lo observado → Medida requerida → Acreditación/seguimiento → Plazo</p>
+<p class="lead"><strong>Por ejemplo:</strong></p>
+<ul><li>“Respecto de lo observado en el numeral X, [materia] (C), la entidad deberá [acción concreta], lo que deberá acreditar [forma de acreditación], en un plazo de XX días hábiles.”</li></ul>
+<p class="">En INFORME FINAL N° 676_2026 esta lógica se ve claramente: cada punto identifica el numeral, la materia, su clasificación y luego establece exactamente lo que debe hacer la municipalidad.</p>
+</div>
+<div class="card">
+<h3>5. Orden según nivel de complejidad</h3>
+<p class="">Las conclusiones mantenidas no deberían ordenarse arbitrariamente.</p>
+<p class="">El Manual establece el orden:</p>
+<h4>AC → C → MC → LC</h4>
+<p class="">Dentro de un mismo nivel de complejidad, se procura conservar el orden numérico original de las observaciones.</p>
+<p class="">Esto es importante para tu agente porque significa que no debe priorizar solamente los hallazgos más llamativos, como sí podríamos hacer para una infografía.</p>
+</div>
+<div class="card">
+<h3>6. Plazos y mecanismo de acreditación</h3>
+<p class="">Cuando la medida tenga plazo, debe conservarse exactamente.</p>
+<p class="lead"><strong>Por ejemplo:</strong></p>
+<ul><li>15 días hábiles;</li><li>30 días hábiles;</li><li>60 días hábiles;</li><li>90 días hábiles.</li></ul>
+<p class="">También debe mantenerse quién verifica o dónde debe acreditarse, por ejemplo, mediante el Sistema de Seguimiento y Apoyo CGR o previa validación de la Dirección de Control, cuando así lo disponga el informe. Esto aparece de manera consistente en los informes revisados.</p>
+<p class="">El agente no debe crear un plazo si el informe no lo establece.</p>
+</div>
+<div class="card">
+<h3>7. Párrafo de cierre y seguimiento</h3>
+<p class="">Finalmente, cuando corresponde, se consolida cómo se realizará el seguimiento.</p>
+<p class="">En los ejemplos revisados se distingue incluso el tratamiento según complejidad. En el informe de Coelemu, por ejemplo, las observaciones AC/C deben acreditarse y documentarse en el sistema institucional, mientras las MC/LC siguen una lógica de información y validación por la Dirección de Control.</p>
+<p class="">Después pueden aparecer las remisiones del informe a las entidades u organismos correspondientes, si así está establecido.</p>
+</div>
+</section>
+    <section id="infografia" class="content-section">
+<h2 class="section-title">Infografía</h2>
+<div class="card">
+<h3>Estructura general</h3>
+<p class="">Archivo en PowerPoint (.pptx) editable.</p>
+<p class="">Página vertical.</p>
+<p class="">Formato A4.</p>
+<p class="">La infografía debe construirse enteramente a partir de la sección Conclusiones del informe final. La selección, descripción y jerarquización de los cuatro hallazgos principales debe basarse exclusivamente en la información contenida en dicha sección. No utilizar como fuente directa la sección Resultado de la Auditoría, el Resumen Ejecutivo, los anexos ni otras partes del informe.</p>
+</div>
+<div class="card">
+<h3>1. Encabezado institucional</h3>
+<p class="lead"><strong>Ubicar en la parte superior:</strong></p>
+<ul><li>Nombre de la auditoría o investigación como título principal.</li><li>Título principal con letra de tamaño 20 a 23 pt, color <code>#1B1F49</code> y en negrita.</li></ul>
+<p class="">Utilizar obligatoriamente el logotipo oficial CGR, disponible en <a href="https://upload.wikimedia.org/wikipedia/commons/5/5b/Logo_CGR_horizontal_y_vertical.png" target="_blank" rel="noopener noreferrer">logotipo oficial CGR</a>. No reemplazarlo por texto. Colocarlo a la izquierda del título principal.</p>
+<p class="">Línea decorativa horizontal bajo el título, dividida en 64% <code>#1B1F49</code>, 18% <code>#74CEC4</code> y 18% <code>#F2567A</code>, manteniendo el mismo orden de izquierda a derecha.</p>
+<p class="">Bajo el título, incluir una breve descripción del objetivo o alcance de la auditoría, con un máximo de 2 líneas y tamaño de letra entre 13 y 15 pt. Esta descripción deberá redactarse únicamente cuando el objetivo o alcance pueda identificarse directamente en las conclusiones. No completar ni inferir información ausente.</p>
+</div>
+<div class="card">
+<h3>2. Separador de sección</h3>
+<p class="">Agregar una línea punteada de color <code>#1B1F49</code>.</p>
+<p class="">Luego de la línea punteada, agregar el título en negrita “Aspectos destacados:”, con tamaño entre 20 y 22 pt y color <code>#1B1F49</code>.</p>
+</div>
+<div class="card">
+<h3>3. Introducción opcional</h3>
+<p class="">Cuando exista una conclusión general o un contexto relevante expresamente señalado en la sección Conclusiones, incorporar una caja rectangular <code>#F4F2E5</code> antes de los hallazgos.</p>
+<p class="lead"><strong>Características:</strong></p>
+<ul><li>Bordes suaves.</li><li>Texto máximo de 3 líneas.</li><li>Letra de tamaño 12 a 13 pt y color <code>#1B1F49</code>.</li><li>No incorporar contexto obtenido de otras secciones del informe.</li><li>No formular una conclusión general nueva ni interpretar los resultados.</li></ul>
+</div>
+<div class="card">
+<h3>4. Bloques de hallazgos</h3>
+<p class="">La información se organiza en 4 hallazgos principales, seleccionados exclusivamente desde la sección Conclusiones.</p>
+<p class="">Los hallazgos deben corresponder a las observaciones, acciones derivadas o medidas correctivas de mayor relevancia contenidas en las conclusiones.</p>
+<p class="">Si existen menos de 4 observaciones relevantes en las conclusiones, desagregar los hallazgos principales en subtemas significativos derivados de esas mismas conclusiones, hasta completar cuatro bloques, sin crear situaciones nuevas ni alterar su sentido.</p>
+<p class="">Si existen más de 4 observaciones relevantes, seleccionar aquellas que mejor representen los riesgos, incumplimientos e impactos más relevantes descritos en las conclusiones, priorizando:</p>
+<p class="">afectación a usuarios o beneficiarios;</p>
+<p class="">impacto financiero;</p>
+<p class="">impacto institucional;</p>
+<p class="">continuidad operacional;</p>
+<p class="">debilidades de supervisión;</p>
+<p class="">observaciones clasificadas como AC o C;</p>
+<p class="">reparos, restituciones, procedimientos disciplinarios, denuncias o remisiones a otros organismos;</p>
+<p class="">montos, cantidades, plazos u otras cifras expresamente consignadas.</p>
+<p class="">La selección de los cuatro hallazgos no debe basarse solamente en el nivel de complejidad. También debe considerar la magnitud del impacto y las acciones requeridas por la CGR.</p>
+<p class="">Cuando una misma observación origine una acción derivada y una medida correctiva, ambas pueden integrarse en el mismo bloque, siempre que correspondan al mismo hecho y estén expresamente señaladas en las conclusiones.</p>
+<p class="">Cada hallazgo ocupa una franja horizontal, con un espacio vertical blanco entre cajas de 10 a 12 px.</p>
+<p class="lead"><strong>Utilizar los siguientes colores:</strong></p>
+<ul><li>Caja 1: <code>#96EAE7</code></li><li>Caja 2: <code>#50CEC3</code></li><li>Caja 3: <code>#006893</code></li><li>Caja 4: <code>#004372</code></li></ul>
+</div>
+<div class="card">
+<h3>Zona central (65%-75%)</h3>
+<p class="lead"><strong>Contiene:</strong></p>
+<p class="">Contiene:</p>
+</div>
+<div class="card">
+<h3>Título del hallazgo</h3>
+<p class="">El título no debe copiar literalmente el texto de las conclusiones.</p>
+<p class="">Debe sintetizar el problema principal utilizando entre 4 y 10 palabras, con un máximo de 2 líneas.</p>
+<p class="">Debe describir la irregularidad detectada en lenguaje simple e institucional.</p>
+<p class="">Evitar referencias a capítulos, numerales, anexos o artículos legales.</p>
+<p class="">Utilizar mayúsculas.</p>
+<p class="">Utilizar negrita.</p>
+<p class="">Tamaño de letra entre 14 y 16 pt.</p>
+<p class="">El título puede simplificar la redacción, pero no debe ampliar, reinterpretar ni cambiar el sentido de la conclusión original.</p>
+</div>
+<div class="card">
+<h3>Descripción del hallazgo</h3>
+<p class="">Los hallazgos de la infografía deben construirse exclusivamente a partir de la sección Conclusiones del informe final.</p>
+<p class="">No utilizar directamente como fuente la sección Resultado de la Auditoría, el Resumen Ejecutivo, la infografía previa ni los anexos.</p>
+<p class="">La descripción debe sintetizar la observación y, cuando corresponda, la principal acción derivada o medida correctiva establecida por la CGR.</p>
+<p class="">Las cifras, cantidades, montos, riesgos, impactos, acciones y plazos deben estar expresamente contenidos en las conclusiones.</p>
+<p class="">No completar cifras ni recuperar detalles desde otras secciones, aunque se relacionen con la misma observación.</p>
+<p class="lead"><strong>Priorizar:</strong></p>
+<ul><li>montos en pesos;</li><li>cantidad de casos;</li><li>litros;</li><li>beneficiarios afectados;</li><li>porcentajes;</li><li>días de retraso;</li><li>plazos de cumplimiento;</li><li>reparos, reintegros o restituciones;</li><li>procedimientos disciplinarios;</li><li>remisiones a otros organismos.</li><li>Tamaño de letra entre 10 y 12 pt.</li><li>Redacción en lenguaje ciudadano.</li><li>Extensión entre 30 y 70 palabras.</li><li>No incluir en el texto visible referencias al numeral ni a la clasificación de complejidad, salvo que resulte indispensable para comprender el hallazgo.</li><li>No describir como ejecutada una medida que solo haya sido requerida, comprometida o se encuentre pendiente de acreditación.</li></ul>
+</div>
+<div class="card">
+<h3>Iconografía de los hallazgos</h3>
+<p class="">Cada hallazgo debe incorporar una ilustración temática ubicada al lado izquierdo de la franja.</p>
+<p class="">La ilustración debe representar visualmente la materia principal del hallazgo.</p>
+<p class="">Debe ocupar aproximadamente entre el 15% y el 20% del ancho de la franja.</p>
+<p class="">Debe estar centrada verticalmente respecto del bloque.</p>
+<p class="">La iconografía debe representar el contenido sustantivo de la conclusión y no solamente la acción requerida. Por ejemplo, una conclusión sobre gastos de combustible debe representarse con un vehículo, combustible o recursos financieros, y no únicamente con un documento de seguimiento.</p>
+</div>
+<div class="card">
+<h3>Ejemplos de iconografía:</h3>
+<p class="">Funcionarios: persona o funcionario.</p>
+<p class="">Educación: escuela o libro.</p>
+<p class="">Salud: hospital o cruz médica.</p>
+<p class="">Finanzas: monedas o billetes.</p>
+<p class="">Viajes: avión o maleta.</p>
+<p class="">Sumarios: expediente o carpeta.</p>
+<p class="">Fiscalización: lupa o balanza.</p>
+<p class="">Tecnología: computador o servidor.</p>
+<p class="">Municipalidades: edificio municipal.</p>
+<p class="">Vehículos: automóvil o camión.</p>
+<p class="">Contrataciones: contrato o firma.</p>
+<p class="">Transferencias: flechas de flujo.</p>
+<p class="">Construcción: edificio o casco de seguridad.</p>
+<p class="">Plazos: calendario o reloj.</p>
+</div>
+<div class="card">
+<h3>Características visuales:</h3>
+<p class="">Ilustraciones vectoriales temáticas.</p>
+<p class="">Flat design institucional.</p>
+<p class="">Apariencia profesional e institucional.</p>
+<p class="">Uso de colores planos sin fondos blancos.</p>
+<p class="">Composición simple y fácilmente reconocible.</p>
+<p class="">Consistencia en tamaño y estilo.</p>
+<p class="">Integración armónica con la paleta de la infografía.</p>
+</div>
+</section>
+  </main>
+  <footer>Infograf-IA</footer>
+</body>
+</html>
