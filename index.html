@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Guía de elaboración | Resumen Ejecutivo</title>
+    <title>Infograf-IA | Guía de elaboración</title>
 
     <style>
         :root {
@@ -17,6 +17,10 @@
 
         * {
             box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
@@ -39,7 +43,7 @@
         .encabezado {
             border-bottom: 4px solid var(--rosado);
             padding-bottom: 25px;
-            margin-bottom: 35px;
+            margin-bottom: 30px;
         }
 
         .etiqueta {
@@ -53,18 +57,64 @@
 
         h1 {
             color: var(--azul);
-            font-size: 42px;
+            font-size: 44px;
             line-height: 1.2;
             margin: 0 0 10px;
         }
 
         .introduccion {
-            max-width: 800px;
+            max-width: 850px;
             font-size: 18px;
             margin: 0;
         }
 
-        /* BLOQUES PRINCIPALES */
+        /* MENÚ */
+
+        .menu-secciones {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+            margin: 30px 0 45px;
+        }
+
+        .menu-secciones a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 58px;
+            padding: 12px 18px;
+            border: 2px solid var(--azul);
+            border-radius: 12px;
+            color: var(--azul);
+            background-color: var(--blanco);
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        .menu-secciones a:hover,
+        .menu-secciones a:focus {
+            color: var(--blanco);
+            background-color: var(--azul);
+        }
+
+        /* SECCIONES PRINCIPALES */
+
+        .seccion-principal {
+            scroll-margin-top: 20px;
+            margin-top: 55px;
+        }
+
+        .titulo-seccion {
+            color: var(--azul);
+            font-size: 32px;
+            padding-bottom: 12px;
+            margin-bottom: 25px;
+            border-bottom: 4px solid var(--rosado);
+        }
+
+        /* BLOQUES */
 
         .bloque {
             border: 1px solid var(--turquesa);
@@ -87,6 +137,13 @@
             margin-bottom: 8px;
         }
 
+        .subtitulo {
+            color: var(--rosado);
+            font-size: 21px;
+            margin-top: 10px;
+            margin-bottom: 12px;
+        }
+
         p {
             margin-top: 0;
             margin-bottom: 16px;
@@ -106,7 +163,7 @@
             margin-bottom: 7px;
         }
 
-        /* EJEMPLOS */
+        /* CAJAS DE EJEMPLO */
 
         .ejemplo {
             background-color: var(--crema);
@@ -125,7 +182,7 @@
             margin: 4px 0;
         }
 
-        /* FÓRMULA DEL HALLAZGO */
+        /* FÓRMULAS */
 
         .formula {
             background-color: var(--turquesa);
@@ -145,6 +202,7 @@
             border-radius: 18px;
             padding: 32px;
             margin-top: 30px;
+            margin-bottom: 25px;
         }
 
         .patron h2 {
@@ -179,6 +237,49 @@
             font-weight: bold;
         }
 
+        /* INFOGRAFÍA */
+
+        .nota-opcional {
+            padding: 18px 22px;
+            margin: 20px 0;
+            border-left: 6px solid var(--turquesa);
+            border-radius: 10px;
+            background-color: var(--crema);
+        }
+
+        .codigo-color {
+            display: inline-block;
+            padding: 2px 8px;
+            border: 1px solid var(--azul);
+            border-radius: 6px;
+            font-family: monospace;
+            font-weight: bold;
+        }
+
+        .enlace-oficial {
+            color: var(--azul);
+            font-weight: bold;
+            text-decoration-color: var(--rosado);
+            text-decoration-thickness: 2px;
+        }
+
+        .enlace-oficial:hover {
+            color: var(--rosado);
+        }
+
+        .division-instruccion {
+            margin: 32px 0;
+            border: 0;
+            border-top: 2px dotted var(--azul);
+        }
+
+        .sin-contenido {
+            padding: 25px;
+            border: 1px solid var(--turquesa);
+            border-radius: 14px;
+            background-color: var(--crema);
+        }
+
         /* RESPONSIVE */
 
         @media (max-width: 700px) {
@@ -188,11 +289,15 @@
             }
 
             h1 {
-                font-size: 32px;
+                font-size: 34px;
             }
 
-            h2 {
-                font-size: 22px;
+            .titulo-seccion {
+                font-size: 27px;
+            }
+
+            .menu-secciones {
+                grid-template-columns: 1fr;
             }
 
             .bloque,
@@ -207,260 +312,282 @@
 
     <main class="contenedor">
 
-        <!-- ENCABEZADO -->
+        <!-- =========================================
+             ENCABEZADO
+        ========================================== -->
 
         <header class="encabezado">
-            <div class="etiqueta">Guía de elaboración</div>
 
-            <h1>Resumen Ejecutivo</h1>
+            <div class="etiqueta">
+                Fuente de conocimiento
+            </div>
+
+            <h1>Infograf-IA</h1>
 
             <p class="introduccion">
-                Estructura y criterios de redacción para reproducir la lógica
-                utilizada en los Informes Finales de CGR.
+                Guía para la elaboración de resúmenes ejecutivos,
+                conclusiones e infografías basadas en los Informes
+                Finales de CGR.
             </p>
+
         </header>
 
 
-        <!-- 1. OBJETIVO -->
+        <!-- =========================================
+             MENÚ
+        ========================================== -->
 
-        <section class="bloque">
+        <nav
+            class="menu-secciones"
+            aria-label="Secciones principales"
+        >
 
-            <h2>1. Objetivo</h2>
+            <a href="#resumen-ejecutivo">
+                Resumen ejecutivo
+            </a>
 
-            <p>
-                Se señala <strong>qué fue objeto de la auditoría</strong>,
-                identificando la entidad fiscalizada, la materia examinada,
-                el período correspondiente y el propósito de la revisión.
-                Cuando corresponde, también se mencionan los principales
-                ámbitos sobre los cuales se efectuaron verificaciones.
+            <a href="#conclusiones">
+                Conclusiones
+            </a>
+
+            <a href="#infografia">
+                Infografía
+            </a>
+
+        </nav>
+
+
+        <!-- =========================================
+             RESUMEN EJECUTIVO
+        ========================================== -->
+
+        <section
+            id="resumen-ejecutivo"
+            class="seccion-principal"
+        >
+
+            <h2 class="titulo-seccion">
+                Resumen ejecutivo
+            </h2>
+
+            <p class="introduccion">
+                Estructura y criterios de redacción para reproducir
+                la lógica utilizada en los Informes Finales de CGR.
             </p>
 
-            <p>
-                La redacción es
-                <strong>formal, objetiva, impersonal y descriptiva</strong>.
-                No adelanta conclusiones ni valoraciones.
-            </p>
-
-            <h3>Construcción habitual</h3>
-
-            <ol>
-                <li>Materia examinada.</li>
-                <li>Entidad fiscalizada.</li>
-                <li>Período auditado.</li>
-                <li>Finalidad o propósito de la auditoría.</li>
-                <li>Aspectos generales sometidos a verificación.</li>
-            </ol>
-
-            <div class="ejemplo">
-                <h3>Inicio sugerido</h3>
-
-                <p>“La auditoría tuvo por objeto…”</p>
-                <p>“La fiscalización tuvo por objeto…”</p>
-                <p>“El examen tuvo por finalidad…”</p>
-            </div>
-
-        </section>
+            <br>
 
 
-        <!-- 2. OBJETIVOS ESPECÍFICOS -->
+            <!-- OBJETIVO -->
 
-        <section class="bloque">
+            <article class="bloque">
 
-            <h2>2. Objetivos específicos / Procedimientos específicos</h2>
+                <h2>1. Objetivo</h2>
 
-            <p>
-                Apartado que aparece
-                <strong>cuando el informe contempla objetivos o procedimientos específicos</strong>.
-                No es obligatorio en todos los Resúmenes Ejecutivos revisados.
-            </p>
-
-            <p>
-                Consiste en un
-                <strong>punteo breve y concreto de las materias particulares verificadas durante la auditoría</strong>,
-                desagregando el objetivo general.
-            </p>
-
-            <p>
-                Cada punto debe expresar
-                <strong>una acción de revisión o verificación</strong>,
-                sin incorporar todavía sus resultados.
-            </p>
-
-            <p>
-                <strong>Lenguaje:</strong>
-                técnico, directo, objetivo e impersonal.
-            </p>
-
-            <div class="ejemplo">
-
-                <h3>Inicios apropiados</h3>
-
-                <ul>
-                    <li>“Verificar…”</li>
-                    <li>“Comprobar…”</li>
-                    <li>“Determinar…”</li>
-                    <li>“Constatar…”</li>
-                    <li>“Examinar…”</li>
-                    <li>“Validar…”</li>
-                </ul>
-
-            </div>
-
-        </section>
-
-
-        <!-- 3. PRINCIPALES RESULTADOS -->
-
-        <section class="bloque">
-
-            <h2>3. Principales resultados</h2>
-
-            <p>
-                Corresponde al
-                <strong>núcleo del Resumen Ejecutivo</strong>.
-                Presenta mediante puntos separados los hallazgos,
-                observaciones o situaciones más relevantes obtenidas como
-                resultado de la auditoría, priorizando aquellas de mayor
-                importancia.
-            </p>
-
-            <p>Cada punto debe permitir comprender:</p>
-
-            <div class="formula">
-                situación detectada →
-                evidencia o magnitud →
-                consecuencia o medida, cuando corresponda
-            </div>
-
-            <p>
-                Cuando existen cifras relevantes, se incorporan directamente:
-                cantidades, montos, porcentajes, número de casos u otros
-                antecedentes cuantificables.
-            </p>
-
-            <p>
-                La redacción debe ser
-                <strong>
-                    objetiva y conclusiva, pero estrictamente proporcional
-                    a lo acreditado en el informe
-                </strong>.
-            </p>
-
-            <div class="ejemplo">
-
-                <h3>Inicios apropiados según el contenido</h3>
-
-                <ul>
-                    <li>“Se constató que…”</li>
-                    <li>“Se verificó que…”</li>
-                    <li>“Se observó que…”</li>
-                    <li>“Se determinó que…”</li>
-                    <li>“De acuerdo con la información examinada…”</li>
-                    <li>“Según los antecedentes analizados…”</li>
-                    <li>“Del análisis efectuado se advirtió que…”</li>
-                </ul>
-
-            </div>
-
-        </section>
-
-
-        <!-- 4. CIERRE -->
-
-        <section class="bloque">
-
-            <h2>4. Cierre o antecedentes complementarios</h2>
-
-            <p>
-                Después de los principales resultados
-                <strong>
-                    pueden incorporarse antecedentes finales cuando el
-                    informe lo requiera
-                </strong>,
-                pero no deberían agregarse artificialmente si no están presentes.
-            </p>
-
-            <p>
-                Este cierre puede recoger consecuencias generales,
-                comunicaciones, derivaciones u otros antecedentes
-                institucionales vinculados a la auditoría.
-            </p>
-
-            <div class="ejemplo">
-
-                <h3>Formulaciones posibles</h3>
-
-                <ul>
-                    <li>“En virtud de los hechos expuestos…”</li>
-                    <li>“Sobre la materia, cabe señalar que…”</li>
-                    <li>“Asimismo, se hace presente que…”</li>
-                    <li>“Finalmente, corresponde indicar que…”</li>
-                </ul>
-
-            </div>
-
-            <p>
-                Si el informe identifica
-                <strong>
-                    profesionales designados, responsables de determinadas
-                    actuaciones u otros antecedentes administrativos
-                </strong>,
-                pueden mencionarse cuando formen parte efectivamente del
-                Resumen Ejecutivo o sean necesarios para comprender una
-                actuación. No deberían incorporarse automáticamente en todos
-                los resúmenes.
-            </p>
-
-        </section>
-
-
-        <!-- PATRÓN GENERAL -->
-
-        <section class="patron">
-
-            <h2>Patrón general</h2>
-
-            <p>
-                En términos simples, la estructura que conviene enseñarle
-                al agente es:
-            </p>
-
-            <div class="paso">
-                <strong>OBJETIVO</strong>
-                <p>Qué se auditó + entidad + período + propósito.</p>
-            </div>
-
-            <div class="flecha">↓</div>
-
-            <div class="paso">
-                <strong>
-                    OBJETIVOS / PROCEDIMIENTOS ESPECÍFICOS, SI EXISTEN
-                </strong>
-                <p>Punteo de acciones concretas de revisión.</p>
-            </div>
-
-            <div class="flecha">↓</div>
-
-            <div class="paso">
-                <strong>PRINCIPALES RESULTADOS</strong>
                 <p>
-                    Punteo de hallazgos principales + evidencia/cifras +
-                    consecuencias o acciones asociadas.
+                    Se señala
+                    <strong>qué fue objeto de la auditoría</strong>,
+                    identificando la entidad fiscalizada, la materia
+                    examinada, el período correspondiente y el propósito
+                    de la revisión. Cuando corresponde, también se
+                    mencionan los principales ámbitos sobre los cuales
+                    se efectuaron verificaciones.
                 </p>
-            </div>
 
-            <div class="flecha">↓</div>
-
-            <div class="paso">
-                <strong>CIERRE, SI CORRESPONDE</strong>
                 <p>
-                    Antecedentes finales, derivaciones, comunicaciones
-                    u otras precisiones relevantes.
+                    La redacción es
+                    <strong>
+                        formal, objetiva, impersonal y descriptiva
+                    </strong>.
+                    No adelanta conclusiones ni valoraciones.
                 </p>
-            </div>
 
-            <div class="mensaje-final">
-                El agente no debería inventar una nueva estructura de
-                “Resumen Ejecutivo”, sino reproducir la lógica que ya
-                utilizan los Informes Finales de CGR.
-            </div>
+                <h3>Construcción habitual</h3>
+
+                <ol>
+                    <li>Materia examinada.</li>
+                    <li>Entidad fiscalizada.</li>
+                    <li>Período auditado.</li>
+                    <li>Finalidad o propósito de la auditoría.</li>
+                    <li>Aspectos generales sometidos a verificación.</li>
+                </ol>
+
+                <div class="ejemplo">
+
+                    <h3>Inicio sugerido</h3>
+
+                    <p>“La auditoría tuvo por objeto…”</p>
+                    <p>“La fiscalización tuvo por objeto…”</p>
+                    <p>“El examen tuvo por finalidad…”</p>
+
+                </div>
+
+            </article>
+
+
+            <!-- OBJETIVOS ESPECÍFICOS -->
+
+            <article class="bloque">
+
+                <h2>
+                    2. Objetivos específicos /
+                    Procedimientos específicos
+                </h2>
+
+                <p>
+                    Apartado que aparece
+                    <strong>
+                        cuando el informe contempla objetivos o
+                        procedimientos específicos
+                    </strong>.
+                    No es obligatorio en todos los Resúmenes Ejecutivos
+                    revisados.
+                </p>
+
+                <p>
+                    Consiste en un
+                    <strong>
+                        punteo breve y concreto de las materias
+                        particulares verificadas durante la auditoría
+                    </strong>,
+                    desagregando el objetivo general.
+                </p>
+
+                <p>
+                    Cada punto debe expresar
+                    <strong>
+                        una acción de revisión o verificación
+                    </strong>,
+                    sin incorporar todavía sus resultados.
+                </p>
+
+                <p>
+                    <strong>Lenguaje:</strong>
+                    técnico, directo, objetivo e impersonal.
+                </p>
+
+                <div class="ejemplo">
+
+                    <h3>Inicios apropiados</h3>
+
+                    <ul>
+                        <li>“Verificar…”</li>
+                        <li>“Comprobar…”</li>
+                        <li>“Determinar…”</li>
+                        <li>“Constatar…”</li>
+                        <li>“Examinar…”</li>
+                        <li>“Validar…”</li>
+                    </ul>
+
+                </div>
+
+            </article>
+
+
+            <!-- PRINCIPALES RESULTADOS -->
+
+            <article class="bloque">
+
+                <h2>3. Principales resultados</h2>
+
+                <p>
+                    Corresponde al
+                    <strong>
+                        núcleo del Resumen Ejecutivo
+                    </strong>.
+                    Presenta mediante puntos separados los hallazgos,
+                    observaciones o situaciones más relevantes obtenidas
+                    como resultado de la auditoría, priorizando aquellas
+                    de mayor importancia.
+                </p>
+
+                <p>
+                    Cada punto debe permitir comprender:
+                </p>
+
+                <div class="formula">
+                    situación detectada
+                    →
+                    evidencia o magnitud
+                    →
+                    consecuencia o medida, cuando corresponda
+                </div>
+
+                <p>
+                    Cuando existen cifras relevantes, se incorporan
+                    directamente: cantidades, montos, porcentajes,
+                    número de casos u otros antecedentes cuantificables.
+                </p>
+
+                <p>
+                    La redacción debe ser
+                    <strong>
+                        objetiva y conclusiva, pero estrictamente
+                        proporcional a lo acreditado en el informe
+                    </strong>.
+                </p>
+
+                <div class="ejemplo">
+
+                    <h3>
+                        Inicios apropiados según el contenido
+                    </h3>
+
+                    <ul>
+                        <li>“Se constató que…”</li>
+                        <li>“Se verificó que…”</li>
+                        <li>“Se observó que…”</li>
+                        <li>“Se determinó que…”</li>
+                        <li>
+                            “De acuerdo con la información examinada…”
+                        </li>
+                        <li>
+                            “Según los antecedentes analizados…”
+                        </li>
+                        <li>
+                            “Del análisis efectuado se advirtió que…”
+                        </li>
+                    </ul>
+
+                </div>
+
+            </article>
+
+
+            <!-- CIERRE -->
+
+            <article class="bloque">
+
+                <h2>
+                    4. Cierre o antecedentes complementarios
+                </h2>
+
+                <p>
+                    Después de los principales resultados
+                    <strong>
+                        pueden incorporarse antecedentes finales cuando
+                        el informe lo requiera
+                    </strong>,
+                    pero no deberían agregarse artificialmente si no
+                    están presentes.
+                </p>
+
+                <p>
+                    Este cierre puede recoger consecuencias generales,
+                    comunicaciones, derivaciones u otros antecedentes
+                    institucionales vinculados a la auditoría.
+                </p>
+
+                <div class="ejemplo">
+
+                    <h3>Formulaciones posibles</h3>
+
+                    <ul>
+                        <li>
+                            “En virtud de los hechos expuestos…”
+                        </li>
+                        <li>
+                            “Sobre la materia, cabe señalar que…”
+                        </li>
+                        <li>
+              
