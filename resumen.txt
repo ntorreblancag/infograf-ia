@@ -1,0 +1,97 @@
+RESUMEN EJECUTIVO
+
+Objetivo
+
+Se señala qué fue objeto de la auditoría, identificando la entidad fiscalizada, la materia examinada, el período correspondiente y el propósito de la revisión. Cuando corresponde, también se mencionan los principales ámbitos sobre los cuales se efectuaron verificaciones.
+
+La redacción es formal, objetiva, impersonal y descriptiva. No adelanta conclusiones ni valoraciones.
+
+Construcción habitual:
+
+Materia examinada.
+Entidad fiscalizada.
+Período auditado.
+Finalidad o propósito de la auditoría.
+Aspectos generales sometidos a verificación.
+
+Inicio sugerido:
+
+“La auditoría tuvo por objeto…”
+ “La fiscalización tuvo por objeto…”
+ “El examen tuvo por finalidad…”
+
+Objetivos específicos / Procedimientos específicos
+
+Apartado que aparece cuando el informe contempla objetivos o procedimientos específicos. No es obligatorio en todos los Resúmenes Ejecutivos revisados.
+
+Consiste en un punteo breve y concreto de las materias particulares verificadas durante la auditoría, desagregando el objetivo general.
+
+Cada punto debe expresar una acción de revisión o verificación, sin incorporar todavía sus resultados.
+
+Lenguaje: técnico, directo, objetivo e impersonal.
+
+Inicios apropiados:
+
+“Verificar…”
+“Comprobar…”
+“Determinar…”
+“Constatar…”
+“Examinar…”
+“Validar…”
+Principales resultados
+
+Corresponde al núcleo del Resumen Ejecutivo. Presenta mediante puntos separados los hallazgos, observaciones o situaciones más relevantes obtenidas como resultado de la auditoría, priorizando aquellas de mayor importancia.
+
+Cada punto debe permitir comprender:
+
+situación detectada → evidencia o magnitud → consecuencia o medida, cuando corresponda.
+
+Cuando existen cifras relevantes, se incorporan directamente: cantidades, montos, porcentajes, número de casos u otros antecedentes cuantificables.
+
+La redacción debe ser objetiva y conclusiva, pero estrictamente proporcional a lo acreditado en el informe.
+
+Inicios apropiados según el contenido:
+
+“Se constató que…”
+“Se verificó que…”
+“Se observó que…”
+“Se determinó que…”
+“De acuerdo con la información examinada…”
+“Según los antecedentes analizados…”
+“Del análisis efectuado se advirtió que…”
+Cierre o antecedentes complementarios
+
+Después de los principales resultados pueden incorporarse antecedentes finales cuando el informe lo requiera, pero no deberían agregarse artificialmente si no están presentes.
+
+Este cierre puede recoger consecuencias generales, comunicaciones, derivaciones u otros antecedentes institucionales vinculados a la auditoría.
+
+Formulaciones posibles:
+
+“En virtud de los hechos expuestos…”
+“Sobre la materia, cabe señalar que…”
+“Asimismo, se hace presente que…”
+“Finalmente, corresponde indicar que…”
+
+Si el informe identifica profesionales designados, responsables de determinadas actuaciones u otros antecedentes administrativos, pueden mencionarse cuando formen parte efectivamente del Resumen Ejecutivo o sean necesarios para comprender una actuación. No deberían incorporarse automáticamente en todos los resúmenes.
+
+Patrón general
+
+En términos simples, la estructura que conviene enseñarle al agente es:
+
+OBJETIVO
+ Qué se auditó + entidad + período + propósito.
+
+↓
+
+OBJETIVOS/PROCEDIMIENTOS ESPECÍFICOS, SI EXISTEN
+ Punteo de acciones concretas de revisión.
+
+↓
+
+PRINCIPALES RESULTADOS
+ Punteo de hallazgos principales + evidencia/cifras + consecuencias o acciones asociadas.
+
+↓
+
+CIERRE, SI CORRESPONDE
+ Antecedentes finales, derivaciones, comunicaciones u otras precisiones relevantes.
