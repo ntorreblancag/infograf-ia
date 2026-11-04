@@ -1,0 +1,122 @@
+INFOGRAFIA
+
+Estructura general
+
+Archivo en PowerPoint (.pptx) editable.
+ Página vertical.
+ Formato A4.
+
+La infografía debe construirse enteramente a partir de la sección Conclusiones del informe final. La selección, descripción y jerarquización de los cuatro hallazgos principales debe basarse exclusivamente en la información contenida en dicha sección. No utilizar como fuente directa la sección Resultado de la Auditoría, el Resumen Ejecutivo, los anexos ni otras partes del informe.
+
+1. Encabezado institucional
+
+Ubicar en la parte superior:
+
+Nombre de la auditoría o investigación como título principal.
+Título principal con letra de tamaño 20 a 23 pt, color #1B1F49 y en negrita.
+Utilizar obligatoriamente el logotipo oficial CGR, disponible en https://upload.wikimedia.org/wikipedia/commons/5/5b/Logo_CGR_horizontal_y_vertical.png. No reemplazarlo por texto. Colocarlo a la izquierda del título principal.
+Línea decorativa horizontal bajo el título, dividida en 64% #1B1F49, 18% #74CEC4 y 18% #F2567A, manteniendo el mismo orden de izquierda a derecha.
+Bajo el título, incluir una breve descripción del objetivo o alcance de la auditoría, con un máximo de 2 líneas y tamaño de letra entre 13 y 15 pt. Esta descripción deberá redactarse únicamente cuando el objetivo o alcance pueda identificarse directamente en las conclusiones. No completar ni inferir información ausente.
+2. Separador de sección
+Agregar una línea punteada de color #1B1F49.
+Luego de la línea punteada, agregar el título en negrita “Aspectos destacados:”, con tamaño entre 20 y 22 pt y color #1B1F49.
+3. Introducción opcional
+
+Cuando exista una conclusión general o un contexto relevante expresamente señalado en la sección Conclusiones, incorporar una caja rectangular #F4F2E5 antes de los hallazgos.
+
+Características:
+
+Bordes suaves.
+Texto máximo de 3 líneas.
+Letra de tamaño 12 a 13 pt y color #1B1F49.
+No incorporar contexto obtenido de otras secciones del informe.
+No formular una conclusión general nueva ni interpretar los resultados.
+4. Bloques de hallazgos
+La información se organiza en 4 hallazgos principales, seleccionados exclusivamente desde la sección Conclusiones.
+Los hallazgos deben corresponder a las observaciones, acciones derivadas o medidas correctivas de mayor relevancia contenidas en las conclusiones.
+Si existen menos de 4 observaciones relevantes en las conclusiones, desagregar los hallazgos principales en subtemas significativos derivados de esas mismas conclusiones, hasta completar cuatro bloques, sin crear situaciones nuevas ni alterar su sentido.
+Si existen más de 4 observaciones relevantes, seleccionar aquellas que mejor representen los riesgos, incumplimientos e impactos más relevantes descritos en las conclusiones, priorizando:
+afectación a usuarios o beneficiarios;
+impacto financiero;
+impacto institucional;
+continuidad operacional;
+debilidades de supervisión;
+observaciones clasificadas como AC o C;
+reparos, restituciones, procedimientos disciplinarios, denuncias o remisiones a otros organismos;
+montos, cantidades, plazos u otras cifras expresamente consignadas.
+La selección de los cuatro hallazgos no debe basarse solamente en el nivel de complejidad. También debe considerar la magnitud del impacto y las acciones requeridas por la CGR.
+Cuando una misma observación origine una acción derivada y una medida correctiva, ambas pueden integrarse en el mismo bloque, siempre que correspondan al mismo hecho y estén expresamente señaladas en las conclusiones.
+Cada hallazgo ocupa una franja horizontal, con un espacio vertical blanco entre cajas de 10 a 12 px.
+Utilizar los siguientes colores:
+Caja 1: #96EAE7
+Caja 2: #50CEC3
+Caja 3: #006893
+Caja 4: #004372
+Zona central (65%-75%)
+
+Contiene:
+
+Título del hallazgo
+El título no debe copiar literalmente el texto de las conclusiones.
+Debe sintetizar el problema principal utilizando entre 4 y 10 palabras, con un máximo de 2 líneas.
+Debe describir la irregularidad detectada en lenguaje simple e institucional.
+Evitar referencias a capítulos, numerales, anexos o artículos legales.
+Utilizar mayúsculas.
+Utilizar negrita.
+Tamaño de letra entre 14 y 16 pt.
+El título puede simplificar la redacción, pero no debe ampliar, reinterpretar ni cambiar el sentido de la conclusión original.
+Descripción del hallazgo
+Los hallazgos de la infografía deben construirse exclusivamente a partir de la sección Conclusiones del informe final.
+No utilizar directamente como fuente la sección Resultado de la Auditoría, el Resumen Ejecutivo, la infografía previa ni los anexos.
+La descripción debe sintetizar la observación y, cuando corresponda, la principal acción derivada o medida correctiva establecida por la CGR.
+Las cifras, cantidades, montos, riesgos, impactos, acciones y plazos deben estar expresamente contenidos en las conclusiones.
+No completar cifras ni recuperar detalles desde otras secciones, aunque se relacionen con la misma observación.
+Priorizar:
+montos en pesos;
+cantidad de casos;
+litros;
+beneficiarios afectados;
+porcentajes;
+días de retraso;
+plazos de cumplimiento;
+reparos, reintegros o restituciones;
+procedimientos disciplinarios;
+remisiones a otros organismos.
+Tamaño de letra entre 10 y 12 pt.
+Redacción en lenguaje ciudadano.
+Extensión entre 30 y 70 palabras.
+No incluir en el texto visible referencias al numeral ni a la clasificación de complejidad, salvo que resulte indispensable para comprender el hallazgo.
+No describir como ejecutada una medida que solo haya sido requerida, comprometida o se encuentre pendiente de acreditación.
+Iconografía de los hallazgos
+Cada hallazgo debe incorporar una ilustración temática ubicada al lado izquierdo de la franja.
+La ilustración debe representar visualmente la materia principal del hallazgo.
+Debe ocupar aproximadamente entre el 15% y el 20% del ancho de la franja.
+Debe estar centrada verticalmente respecto del bloque.
+La iconografía debe representar el contenido sustantivo de la conclusión y no solamente la acción requerida. Por ejemplo, una conclusión sobre gastos de combustible debe representarse con un vehículo, combustible o recursos financieros, y no únicamente con un documento de seguimiento.
+
+Ejemplos de iconografía:
+
+Funcionarios: persona o funcionario.
+Educación: escuela o libro.
+Salud: hospital o cruz médica.
+Finanzas: monedas o billetes.
+Viajes: avión o maleta.
+Sumarios: expediente o carpeta.
+Fiscalización: lupa o balanza.
+Tecnología: computador o servidor.
+Municipalidades: edificio municipal.
+Vehículos: automóvil o camión.
+Contrataciones: contrato o firma.
+Transferencias: flechas de flujo.
+Construcción: edificio o casco de seguridad.
+Plazos: calendario o reloj.
+
+Características visuales:
+
+Ilustraciones vectoriales temáticas.
+Flat design institucional.
+Apariencia profesional e institucional.
+Uso de colores planos sin fondos blancos.
+Composición simple y fácilmente reconocible.
+Consistencia en tamaño y estilo.
+Integración armónica con la paleta de la infografía.
