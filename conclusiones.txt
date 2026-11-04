@@ -1,0 +1,102 @@
+CONCLUSIONES
+1. Párrafo introductorio
+
+Se comienza indicando el resultado general del análisis de la respuesta de la entidad al preinforme.
+
+Debe señalar si los antecedentes aportados permitieron salvar todas, algunas o ninguna de las observaciones.
+
+Una fórmula recurrente es:
+
+“Atendidas las consideraciones expuestas durante el desarrollo del presente trabajo…”
+
+Por ejemplo, en INFORME FINAL N° 676_2026 se indica que los antecedentes permitieron salvar una de las observaciones; mientras que en 1_INFORME FINAL 483-25 MOP se establece que no se aportaron antecedentes suficientes para salvarlas.
+
+Objetivo: presentar el balance general entre el preinforme y el resultado definitivo.
+
+2. Observaciones levantadas y/o subsanadas
+
+A continuación, se identifican expresamente las observaciones que dejaron de requerir acciones posteriores.
+
+Para cada una indicar:
+
+capítulo o acápite;
+numeral de la observación;
+materia observada;
+estado final: levantada o subsanada;
+cuando corresponda, breve referencia al motivo.
+
+En INFORME FINAL N° 901-2025, por ejemplo, primero se identifica una observación levantada y otra subsanada antes de pasar a aquellas que generan acciones.
+
+Importante: no son equivalentes:
+
+Levantada: los antecedentes permiten desvirtuar lo objetado.
+Subsanada: la entidad remedió completamente lo observado y acreditó las medidas adoptadas. Esta distinción está expresamente contemplada por el Manual.
+3. Acciones derivadas
+
+Luego se separan aquellas observaciones que generan una acción derivada, cuando corresponda.
+
+Se introduce normalmente con una fórmula como:
+
+“No obstante lo anterior, y en virtud de los resultados obtenidos…”
+
+Aquí deben identificarse acciones tales como:
+
+reparo;
+procedimiento disciplinario o sumario;
+restitución/reintegro;
+denuncia;
+remisión a otro organismo;
+otras acciones expresamente establecidas en el informe.
+
+El Manual indica expresamente que estas acciones deben aparecer antes de las restantes medidas correctivas.
+
+Por ejemplo, en INFORME FINAL DE INVESTIGACIÓN ESPECIAL N° 814, DE 2025, SOBRE EVENTUALES IRREGULARIDA primero se establece un reparo por $214.043.374 y posteriormente el procedimiento disciplinario correspondiente.
+
+4. Observaciones que se mantienen y medidas correctivas
+
+Después se presentan las observaciones restantes que continúan vigentes.
+
+La estructura de cada conclusión debería ser:
+
+Referencia → Complejidad → Síntesis de lo observado → Medida requerida → Acreditación/seguimiento → Plazo
+
+Por ejemplo:
+
+“Respecto de lo observado en el numeral X, [materia] (C), la entidad deberá [acción concreta], lo que deberá acreditar [forma de acreditación], en un plazo de XX días hábiles.”
+
+En INFORME FINAL N° 676_2026 esta lógica se ve claramente: cada punto identifica el numeral, la materia, su clasificación y luego establece exactamente lo que debe hacer la municipalidad.
+
+5. Orden según nivel de complejidad
+
+Las conclusiones mantenidas no deberían ordenarse arbitrariamente.
+
+El Manual establece el orden:
+
+AC → C → MC → LC
+
+Dentro de un mismo nivel de complejidad, se procura conservar el orden numérico original de las observaciones.
+
+Esto es importante para tu agente porque significa que no debe priorizar solamente los hallazgos más llamativos, como sí podríamos hacer para una infografía.
+
+6. Plazos y mecanismo de acreditación
+
+Cuando la medida tenga plazo, debe conservarse exactamente.
+
+Por ejemplo:
+
+15 días hábiles;
+30 días hábiles;
+60 días hábiles;
+90 días hábiles.
+
+También debe mantenerse quién verifica o dónde debe acreditarse, por ejemplo, mediante el Sistema de Seguimiento y Apoyo CGR o previa validación de la Dirección de Control, cuando así lo disponga el informe. Esto aparece de manera consistente en los informes revisados.
+
+El agente no debe crear un plazo si el informe no lo establece.
+
+7. Párrafo de cierre y seguimiento
+
+Finalmente, cuando corresponde, se consolida cómo se realizará el seguimiento.
+
+En los ejemplos revisados se distingue incluso el tratamiento según complejidad. En el informe de Coelemu, por ejemplo, las observaciones AC/C deben acreditarse y documentarse en el sistema institucional, mientras las MC/LC siguen una lógica de información y validación por la Dirección de Control.
+
+Después pueden aparecer las remisiones del informe a las entidades u organismos correspondientes, si así está establecido.
