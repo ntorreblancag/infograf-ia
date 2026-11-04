@@ -100,3 +100,5 @@ Finalmente, cuando corresponde, se consolida cómo se realizará el seguimiento.
 En los ejemplos revisados se distingue incluso el tratamiento según complejidad. En el informe de Coelemu, por ejemplo, las observaciones AC/C deben acreditarse y documentarse en el sistema institucional, mientras las MC/LC siguen una lógica de información y validación por la Dirección de Control.
 
 Después pueden aparecer las remisiones del informe a las entidades u organismos correspondientes, si así está establecido.
+
+.
